@@ -1,4 +1,4 @@
-package src.main;
+
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
@@ -11,8 +11,8 @@ public class Archivio1 {
 	static Scanner s = new Scanner(System.in);
 	
 	public Archivio1() {
-		this.listaDetenuti = new ArrayList<>();
-		this.listaGuardie = new ArrayList<>();	
+		this.listaDetenuti = new ArrayList<Detenuti1>();
+		this.listaGuardie = new ArrayList<Guardie1>();
 
 	}
 
