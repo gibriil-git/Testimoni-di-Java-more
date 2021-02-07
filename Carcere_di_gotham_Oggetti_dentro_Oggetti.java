@@ -3,8 +3,6 @@ package carcere_di_Gotham_FileReader;
 public class Carcere_di_gotham_Oggetti_dentro_Oggetti {
 
 	public static void main(String[] args) {
-		
-		
 		Archivio1 archivio = new Archivio1();
 		
 		// dati anagrafici
