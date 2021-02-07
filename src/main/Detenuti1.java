@@ -1,4 +1,4 @@
-package carcere_di_Gotham_FileReader;
+package src.main;
 
 public class Detenuti1 {
 
