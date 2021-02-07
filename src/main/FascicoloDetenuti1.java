@@ -11,7 +11,6 @@ public class FascicoloDetenuti1 {
 	private boolean evasione;
 	private boolean deceduto;
 
-
 	public FascicoloDetenuti1(String nome, String cognome, int idNumber, String dataCarcerazione, String dataRilascio, String ragioniCarcerazione, 
 							 boolean evasione,boolean deceduto) {
 		
@@ -24,8 +23,6 @@ public class FascicoloDetenuti1 {
 		this.evasione = evasione;
 		this.deceduto = deceduto;
 	}
-
-	
 
 	public String getNome() {
 		return nome;
@@ -62,7 +59,6 @@ public class FascicoloDetenuti1 {
 	public boolean isDeceduto() {
 		return deceduto;
 	}
-
 
 	public void displayFascicoloDetenuto() {
 		System.out.println(nome + " " + cognome + "\nID Number: " + idNumber + "\nData Carcerazione: " + dataCarcerazione 

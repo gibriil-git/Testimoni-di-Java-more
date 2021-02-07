@@ -1,6 +1,7 @@
 package src.main;
 
 public class Guardie1{
+
 	private String nome;
 	private String cognome;
 	private String dataNascita;
@@ -8,10 +9,6 @@ public class Guardie1{
 	private String residenza;
 	private FascicoloGuardie1 fascicoloGuardia;
 
-
-	
-	
-	
 	public Guardie1(String nome, String cognome, String dataNascita, String luogoNascita, String residenza) {
 		this.nome = nome;
 		this.cognome = cognome;
@@ -20,14 +17,9 @@ public class Guardie1{
 		this.residenza = residenza;
 	}
 
-
-
-
 	public Guardie1() {
 		// TODO Auto-generated constructor stub
 	}
-
-
 
 	// trova il fascicolo della guardia e lo stampa attraverso metodo 'displayGuardia'
 	public FascicoloGuardie1 getFascicoloGuardia() {
@@ -38,8 +30,6 @@ public class Guardie1{
 	public void setFascicoloGuardia(FascicoloGuardie1 fascicoloGuardia) {
 		this.fascicoloGuardia = fascicoloGuardia;
 	}
-
-
 
 	public String getNome() {
 		return nome;

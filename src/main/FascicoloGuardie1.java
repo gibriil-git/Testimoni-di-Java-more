@@ -1,4 +1,4 @@
-package carcere_di_Gotham_FileReader;
+package src.main;
 
 public class FascicoloGuardie1 {
 	
@@ -11,7 +11,6 @@ public class FascicoloGuardie1 {
 	
 	
 	public FascicoloGuardie1(String nome, String cognome, int idNumber, String dataAssunzione, String dataFineRapporto, String mansione) {
-		
 		this.nome = nome;
 		this.cognome = cognome;
 		this.idNumber = idNumber;
@@ -21,21 +20,17 @@ public class FascicoloGuardie1 {
 		
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
-
 
 	public String getCognome() {
 		return cognome;
 	}
 
-
 	public int getIdNumber() {
 		return idNumber;
 	}
-
 
 	public String getDataAssunzione() {
 		return dataAssunzione;
