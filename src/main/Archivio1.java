@@ -1,4 +1,4 @@
-package carcere_di_Gotham_FileReader;
+package src.main;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
@@ -15,12 +15,9 @@ public class Archivio1 {
 		this.listaGuardie = new ArrayList<>();	
 
 	}
-	
-	
 
 	//aggiunge dati anagrafici prigionieri 
-	public void addNewPrisoner(Detenuti1 nomeDetenuto) {
-		
+	public void addNewPrisoner() {
 		try{
 			System.out.println("Inserisci il nome del nuovo detenuto: ");
 			String nome = s.nextLine();
@@ -33,7 +30,6 @@ public class Archivio1 {
 			System.out.println("Inserisci la residenza: ");
 			String residenza = s.nextLine(); 
 			Detenuti1 detenuto = new Detenuti1(nome, cognome, dataNascita, luogoNascita, residenza);
-			nomeDetenuto = detenuto;
 			this.listaDetenuti.add(detenuto);
 		
 		} catch(NoSuchElementException e) {
@@ -43,8 +39,7 @@ public class Archivio1 {
 	}
 	
 	//aggiunge dati anagrafici guardie  
-	public void addNewGuard(Guardie1 nomeGuardia) {
-		
+	public void addNewGuard() {
 		try{
 			System.out.println("Inserisci il nome della guardia: ");
 			String nome = s.nextLine();
@@ -57,9 +52,7 @@ public class Archivio1 {
 			System.out.println("Inserisci la residenza: ");
 			String residenza = s.nextLine(); 
 			Guardie1 guardia = new Guardie1(nome, cognome, dataNascita, luogoNascita, residenza);
-			nomeGuardia = guardia;
 			this.listaGuardie.add(guardia);
-			
 		} catch(NoSuchElementException ex) {
 			System.out.println("ops");
 		}
@@ -69,15 +62,13 @@ public class Archivio1 {
 	//aggiunge dati anagrafici prigionieri [DB]
 	public void addPrisoner(Detenuti1 detenuto) {
 		this.listaDetenuti.add(detenuto);
-	
 	}
 	
 	//aggiunge dati anagrafici guardie  [DB]
 	public void addGuard(Guardie1 guardia) {
-	
 		this.listaGuardie.add(guardia);
 	}
-	
+
 	// dati anagrafici x nome e cognome
 	public void searchPrisoner(String nome, String cognome) {
 		for (Detenuti1 detenuti : listaDetenuti) {
@@ -111,8 +102,7 @@ public class Archivio1 {
 			}
 		}
 	}	
-	
-	
+
 	public void displayPrisonersList() {
 		for(Detenuti1 detenuti : listaDetenuti) {
 				detenuti.displayDetenuto();
@@ -128,15 +118,14 @@ public class Archivio1 {
 	public void displayFascicoliPrisonersList() {
 		for(Detenuti1 detenuti : listaDetenuti) {
 			detenuti.getFascicoloDetenuto().displayFascicoloDetenuto();;
+		}
 	}
-}
-	
-	
+
 	public void displayFascicoliGuardsList() {
 		for(Guardie1 guardie : listaGuardie) {
 			guardie.getFascicoloGuardia().displayFascicoloGuardia();;
+		}
 	}
-}
 	
 	
 	public void riepilogoCarcere() {
@@ -153,8 +142,7 @@ public class Archivio1 {
 			}
 		}
 		System.out.println("Totale detenuti presenti: " + y + "\nTotale detenuti deceduti: " + z + "\nTotale evasi: " + x);
-	
-	
+
 		for(Guardie1 fascicoliGuardie : listaGuardie) {
 			i++;
 			if(!fascicoliGuardie.getFascicoloGuardia().getDataFineRapporto().equals("none")) {	
