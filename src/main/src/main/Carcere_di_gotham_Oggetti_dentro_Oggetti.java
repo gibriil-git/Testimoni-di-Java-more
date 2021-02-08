@@ -1,12 +1,43 @@
 package src.main;
 
+import java.util.Scanner;
+
 public class Carcere_di_gotham_Oggetti_dentro_Oggetti {
+
+public static String[] scannerNewMember(Boolean prisoner) {
+	Scanner s = new Scanner(System.in);
+	String nome = "";
+	if(prisoner == true) {
+		System.out.println("Inserisci il nome del detenuto: ");
+		nome = s.nextLine();
+	}
+	else{
+		System.out.println("Inserisci il nome della guardia: ");
+		nome = s.nextLine();
+	}
+
+	System.out.println("Inserisci il cognome: ");
+	String cognome = s.nextLine();
+	System.out.println("Inserisci la data di nascita: ");
+	String dataNascita = s.nextLine();
+	System.out.println("Inserisci il luogo di nascita: ");
+	String luogoNascita = s.nextLine();
+	System.out.println("Inserisci la residenza: ");
+	String residenza = s.nextLine();
+
+	String[] newMember = {nome, cognome, dataNascita, luogoNascita, residenza};
+
+	return newMember;
+}
+
+
 
 	public static void main(String[] args) {
 		Archivio1 archivio = new Archivio1();
 
 		// dati anagrafici
-		
+		archivio.addNewPrisoner(scannerNewMember(true));
+		archivio.addNewGuard(scannerNewMember(false));
 		//Detenuti1 markFisher = new Detenuti1("Mark", "Fisher", "13/7/67", "Gotham", "Gotham");
 		//archivio.addPrisoner(markFisher);
 		//Detenuti1 philipMiller = new Detenuti1("Philip", "Miller", "13/7/69", "Gotham", "Gotham");
@@ -47,8 +78,8 @@ public class Carcere_di_gotham_Oggetti_dentro_Oggetti {
 		//batMan.getFascicoloGuardia().displayFascicoloGuardia();
 		//archivio.searchPrisoner("Jesus", "Christ");
 		//archivio.searchGuard("Bat", "Man");
-		//archivio.displayPrisonersList();
-		//archivio.displayGuardsList();
+		archivio.displayPrisonersList();
+		archivio.displayGuardsList();
 		//archivio.displayFascicoliPrisonersList();
 		//archivio.displayFascicoliGuardsList();
 		//archivio.riepilogoCarcere();

@@ -1,4 +1,4 @@
-
+package src.main;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
@@ -17,41 +17,25 @@ public class Archivio1 {
 	}
 
 	//aggiunge dati anagrafici prigionieri 
-	public void addNewPrisoner() {
-		try{
-			System.out.println("Inserisci il nome del nuovo detenuto: ");
-			String nome = s.nextLine();
-			System.out.println("Inserisci il cognome: ");
-			String cognome = s.nextLine();
-			System.out.println("Inserisci la data di nascita: ");
-			String dataNascita = s.nextLine();
-			System.out.println("Inserisci il luogo di nascita: ");
-			String luogoNascita = s.nextLine();
-			System.out.println("Inserisci la residenza: ");
-			String residenza = s.nextLine(); 
-			Detenuti1 detenuto = new Detenuti1(nome, cognome, dataNascita, luogoNascita, residenza);
-			this.listaDetenuti.add(detenuto);
-		
-		} catch(NoSuchElementException e) {
-			System.out.println("ops");
-		}
+	public void addNewPrisoner(String[] newMember) {
+
+		try {
+				Detenuti1 detenuto = new Detenuti1(newMember[0], newMember[1],
+						newMember[2], newMember[3], newMember[4]);
+				this.listaDetenuti.add(detenuto);
+
+			} catch (NoSuchElementException e) {
+				System.out.println("ops");
+			}
 	
 	}
 	
 	//aggiunge dati anagrafici guardie  
-	public void addNewGuard() {
+	public void addNewGuard(String[] newMember) {
 		try{
-			System.out.println("Inserisci il nome della guardia: ");
-			String nome = s.nextLine();
-			System.out.println("Inserisci il cognome: ");
-			String cognome = s.nextLine();
-			System.out.println("Inserisci la data di nascita: ");
-			String dataNascita = s.nextLine();
-			System.out.println("Inserisci il luogo di nascita: ");
-			String luogoNascita = s.nextLine();
-			System.out.println("Inserisci la residenza: ");
-			String residenza = s.nextLine(); 
-			Guardie1 guardia = new Guardie1(nome, cognome, dataNascita, luogoNascita, residenza);
+
+			Guardie1 guardia = new Guardie1(newMember[0], newMember[1],
+					newMember[2], newMember[3], newMember[4]);;
 			this.listaGuardie.add(guardia);
 		} catch(NoSuchElementException ex) {
 			System.out.println("ops");
