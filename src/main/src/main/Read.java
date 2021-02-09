@@ -36,7 +36,6 @@ public class Read {
 						System.out.print(c.next() + " ");
 						i++;
 					}
-
 				}
 			}
 		} catch (FileNotFoundException e) {

@@ -18,8 +18,6 @@ public class Detenuti1 {
 		
 	}
 
-
-
 	public Detenuti1() {
 		// TODO Auto-generated constructor stub
 	}
@@ -83,6 +81,6 @@ public class Detenuti1 {
 	public void displayDetenuto() {
 		System.out.println(nome + " " + cognome + "\nNato il: " + dataNascita + " a " + luogoNascita + "\nResidente a: " + residenza + "\n");
 	}
-	
+
 
 }

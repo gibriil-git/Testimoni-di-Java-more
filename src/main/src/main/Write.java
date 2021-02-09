@@ -12,7 +12,7 @@ import java.io.FileWriter;
 
 public class Write {
 
-	public static void writeDetenuti () {
+	public static void writeDetenuti() {
 		//aggiungiamo i detenuti al file di testo per creare un database
 		Detenuti1 markFisher = new Detenuti1("Mark", "Fisher", "13/7/67", "Gotham", "Gotham");
 		Detenuti1 philipMiller = new Detenuti1("Philip", "Miller", "13/7/69", "Gotham", "Gotham");
