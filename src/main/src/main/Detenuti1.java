@@ -18,16 +18,17 @@ public class Detenuti1 {
 		
 	}
 
-	@Override
-	public String toString() {
-		return "nome" + " " + nome + " " + "cognome" + " " + cognome ;
-				/*"  dataNascita " + dataNascita
-				+ "  luogoNascita " + luogoNascita + "  residenza " + residenza + "  fascicoloDetenuto "
-				+ fascicoloDetenuto ;*/
-	}
+
 
 	public Detenuti1() {
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "nome" + " " + nome + " " + "cognome" + " " + cognome + "  dataNascita " + dataNascita
+				+ "  luogoNascita " + luogoNascita + "  residenza " + residenza;
+		//+ "  fascicoloDetenuto " + fascicoloDetenuto ;
 	}
 
 	// trova il fascicolo del detenuto e lo stampa attraverso metodo 'displayDetenuto'

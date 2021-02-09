@@ -21,6 +21,13 @@ public class Guardie1{
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "nome" + " " + nome + " " + "cognome" + " " + cognome + "  dataNascita " + dataNascita
+				+ "  luogoNascita " + luogoNascita + "  residenza " + residenza;
+		//+ "  fascicoloDetenuto " + fascicoloDetenuto ;
+	}
+
 	// trova il fascicolo della guardia e lo stampa attraverso metodo 'displayGuardia'
 	public FascicoloGuardie1 getFascicoloGuardia() {
 		return fascicoloGuardia;

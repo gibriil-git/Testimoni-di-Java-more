@@ -2,13 +2,12 @@ package src.main;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
-import java.util.Scanner;
 
 public class Archivio1 {
 	
 	private ArrayList<Detenuti1> listaDetenuti;
 	private ArrayList<Guardie1> listaGuardie;
-	static Scanner s = new Scanner(System.in);
+
 	
 	public Archivio1() {
 		this.listaDetenuti = new ArrayList<Detenuti1>();
