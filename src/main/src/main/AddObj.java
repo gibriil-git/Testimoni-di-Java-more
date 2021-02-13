@@ -7,6 +7,10 @@ public class AddObj extends Archivio1{
         super(listaDetenuti, listaGuardie);
     }
 
+    public AddObj() {
+        super();
+    }
+
     public ArrayList<Detenuti1> addObjectsPrisoners() {
         Archivio1 archivio = new Archivio1(listaDetenuti, listaGuardie);
 

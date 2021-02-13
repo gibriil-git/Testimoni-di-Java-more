@@ -5,3 +5,13 @@ nome Philip cognome Miller  dataNascita 13/7/69  luogoNascita Gotham  residenza 
 nome Jesus cognome Christ  dataNascita 0/0/00  luogoNascita Gotham  residenza Gotham
 nome Joker cognome Joker  dataNascita 1/1/70  luogoNascita Gotham  residenza Gotham
 nome Arley cognome Queen  dataNascita 13/11/75  luogoNascita Gotham  residenza Gotham
+
+
+
+nome Mark cognome Fisher  dataNascita 13/7/67  luogoNascita Gotham  residenza Gotham
+nome Philip cognome Miller  dataNascita 13/7/69  luogoNascita Gotham  residenza Gotham
+nome Jesus cognome Christ  dataNascita 0/0/00  luogoNascita Gotham  residenza Gotham
+nome Joker cognome Joker  dataNascita 1/1/70  luogoNascita Gotham  residenza Gotham
+nome Arley cognome Queen  dataNascita 13/11/75  luogoNascita Gotham  residenza Gotham
+
+nome k cognome k  dataNascita k  luogoNascita k  residenza k

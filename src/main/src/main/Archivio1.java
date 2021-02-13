@@ -1,5 +1,9 @@
 package src.main;
 
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
@@ -8,9 +12,6 @@ public class Archivio1 {
 	protected ArrayList<Detenuti1> listaDetenuti;
 	protected ArrayList<Guardie1> listaGuardie;
 
-	public Archivio1(){
-
-	}
 
 	public Archivio1(ArrayList<Detenuti1> listaDetenuti, ArrayList<Guardie1> listaGuardie) {
 		this.listaDetenuti = listaDetenuti;
@@ -18,29 +19,41 @@ public class Archivio1 {
 
 	}
 
+	public Archivio1() {
+
+	}
+
 	//aggiunge dati anagrafici prigionieri 
 	public void addNewPrisoner(String[] newMember) {
 
-		try {
+		try (FileWriter fas = new FileWriter("detenuti.txt", true);
+			PrintWriter fos = new PrintWriter(fas)) {
+
 			Detenuti1 detenuto = new Detenuti1(newMember[0], newMember[1],
 					newMember[2], newMember[3], newMember[4]);
 			this.listaDetenuti.add(detenuto);
+			fos.println(detenuto.toString());
+			System.out.println("Object written onto the file");
 
-		} catch (NoSuchElementException e) {
+		} catch (NoSuchElementException | IOException e) {
 			System.out.println("ops");
 		}
-
 	}
 
 	//aggiunge dati anagrafici guardie  
 	public void addNewGuard(String[] newMember) {
-		try {
+		try (FileWriter fas = new FileWriter("guardie.txt", true);
+			PrintWriter fos = new PrintWriter(fas)) {
 
 			Guardie1 guardia = new Guardie1(newMember[0], newMember[1],
 					newMember[2], newMember[3], newMember[4]);
-			;
+
 			this.listaGuardie.add(guardia);
-		} catch (NoSuchElementException ex) {
+
+			fos.println(guardia.toString());
+			System.out.println("Object written onto the file");
+
+		} catch (NoSuchElementException | IOException ex) {
 			System.out.println("ops");
 		}
 	}

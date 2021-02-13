@@ -44,18 +44,25 @@ public static String[] scannerNewMember() {
 		AddObj obj = new AddObj(listaDetenuti, listaGuardie);
 
 
-		//markFisher.getFascicoloDetenuto().displayFascicoloDetenuto();  
+
+	// get fascicoliiiiiiiiiiiiiiiiiiiiiiiiiiiiiïiiiiiiiiï222iiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+
+
+
+
+		Detenuti1 detenuto = new Detenuti1();
+		detenuto.getFascicoloDetenuto().displayFascicoloDetenuto();
 		//batMan.getFascicoloGuardia().displayFascicoloGuardia();
 		//archivio.searchPrisoner("Jesus", "Christ");
 		//archivio.searchGuard("Bat", "Man");
 
-		//archivio.addNewPrisoner(scannerNewMember());
-		//archivio.addNewGuard(scannerNewMember());
+		//archive.addNewPrisoner(scannerNewMember());
+		//archive.addNewGuard(scannerNewMember());
 
-		/*Write prisoners = new Write();
-		Write guards = new Write();
-		guards.writeGuardie();
-		prisoners.writeDetenuti();*/
+		Write prisoners = new Write(listaDetenuti, listaGuardie);
+		Write guards = new Write(listaDetenuti, listaGuardie);
+		//guards.writeGuardie(obj.addObjectsGuards());
+		//prisoners.writeDetenuti(obj.addObjectsPrisoners());
 
 		/*
 		Read read = new Read();
@@ -63,14 +70,14 @@ public static String[] scannerNewMember() {
 		read.readGuards();
 		*/
 
-		archive.displayPrisonersList(obj.addObjectsPrisoners());
-		archive.displayGuardsList(obj.addObjectsGuards());
-		archive.displayFascicoliPrisonersList();
+		//archive.displayPrisonersList(obj.addObjectsPrisoners());
+		//archive.displayGuardsList(obj.addObjectsGuards());
+		//archive.displayFascicoliPrisonersList();
 		//archivio.displayFascicoliGuardsList();
 		//archivio.riepilogoCarcere();
-		
-		
-		
+
+
+
 		//Inserimento nuovi detenuti e guardie da tastiera
 		//Detenuti1 Freezer = new Detenuti1();
 		//archivio.addNewPrisoner(Freezer);
