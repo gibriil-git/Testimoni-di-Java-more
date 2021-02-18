@@ -31,32 +31,10 @@ public class FascicoloGuardie1 {
 				", mansione '" + mansione + '\'' ;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public String getCognome() {
-		return cognome;
-	}
-
-	public int getIdNumber() {
-		return idNumber;
-	}
-
-	public String getDataAssunzione() {
-		return dataAssunzione;
-	}
-
-
 	public String getDataFineRapporto() {
 		return dataFineRapporto;
 	}
 
-
-	public String getMansione() {
-		return mansione;
-	}
-	
 	public void displayFascicoloGuardia() {
 		System.out.println(nome + " " + cognome + "\nID Number: " + idNumber + "\nData Assunzione: " + dataAssunzione 
 							+ "\nData Fine Rapporto: " + dataFineRapporto + "\nMansione: " + mansione + "\n" );

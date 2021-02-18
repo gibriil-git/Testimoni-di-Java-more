@@ -81,20 +81,24 @@ public static String[] scannerNewMember() {
 
 		Archivio1 archive = new Archivio1(listaDetenuti, listaGuardie);
 		AddObj obj = new AddObj(listaDetenuti, listaGuardie);
-
-
-//Inserimento e scrittura su file del DB di guardie e detenuti dal metodo 'addObjectsPrisoners' e 'addObjectsGuards'
-		Write prisoners = new Write(listaDetenuti, listaGuardie);
-		Write guards = new Write(listaDetenuti, listaGuardie);
-		//guards.writeGuardie(archive.addObjectsGuards());
-		//prisoners.writeDetenuti(archive.addObjectsPrisoners());
-		//prisoners.writeFascicoloDetenuti(archive.addObjectsPrisoners());
-		//guards.writeFascicoloGuardie(archive.addObjectsGuards());
-
-//ricerca fascicoli x nome
 		Detenuti1 detenuto = new Detenuti1();
 		Guardie1 guardia = new Guardie1();
-		//detenuto.getFascicoloDetenuto(archive.addObjectsPrisoners(), "Joker");
+		Write prisoners = new Write(listaDetenuti, listaGuardie);
+		Write guards = new Write(listaDetenuti, listaGuardie);
+		Read read = new Read();
+
+//aggiunge gli oggetti alle liste guardie e detenuti
+		archive.addObjectsGuards();
+		archive.addObjectsPrisoners();
+
+//scrittura su file del DB di guardie e detenuti dal metodo 'addObjectsPrisoners' e 'addObjectsGuards'
+		//guards.writeGuardie();
+		//prisoners.writeDetenuti();
+		//prisoners.writeFascicoloDetenuti();
+		//guards.writeFascicoloGuardie();
+
+//ricerca fascicoli x nome
+		//detenuto.getFascicoloDetenuto(listaDetenuti, "Joker");
 		//guardia.getFascicoloGuardia(archive.addObjectsGuards(), "Bat");
 		//archive.searchPrisoner(archive.addObjectsPrisoners(), "Jesus", "Christ");
 		//archive.searchGuard(archive.addObjectsGuards(), "Bat", "Man");
@@ -104,14 +108,12 @@ public static String[] scannerNewMember() {
 		//archive.addNewGuard(scannerNewMember());
 
 //Lettura da file
-
-		Read read = new Read();
 		//read.readPrisoners();
 		//read.readGuards();
 
 //Displaying di liste dati anagrafici e fascicoli
 		//archive.displayPrisonersList(archive.addObjectsPrisoners());
-		//archive.displayGuardsList(archive.addObjectsGuards());
+		//archive.displayGuardsList();
 		//archive.displayFascicoliPrisonersList(archive.addObjectsPrisoners());
 		//archive.displayFascicoliGuardsList(archive.addObjectsGuards());
 		//archive.riepilogoCarcere(archive.addObjectsPrisoners(), archive.addObjectsGuards());
@@ -119,31 +121,3 @@ public static String[] scannerNewMember() {
 	}
 
 }
-/*
-Il carcere di Gotham City
-Sei appena stato nominato direttore presso il carcere di Gotham City.
-Hai l'arduo compito di scrivere un programma che gestisca:
-- I dati anagrafici delle guardie
-- I dati anagrafici dei detenuti
-- I fascicoli personali dei detenuti, che devono contenere almeno queste informazioni:
-    - Un identificativo del criminale
-    - La data di carcerazione
-    - La data di scarcerazione
-    - Il crimine commesso
-Visto che sei tu il capo, decidi se usare lo stesso oggetto per gestire sia le guardie che i criminali.
-In ogni caso dovrai definire la banca dati della prigione: crea un array di guardie, uno di detenuti e uno per i fascicoli.
-Prevedi la possibilià di:
-  - Assumere nuove guardie
-  - Schedare nuovi carcerati
-  - Aggiungere nuovi fascicoli
-  - Visualizzare l'elenco per ciascuna categoria (guardie, criminali, fascicoli)
-  - Effettuare ricerche nei fascicoli per nome del detenuto
-Nel carcere di Gothma City non tutti i detenuti arrivano alla data di scarcerazione,
-gestisci l’eventualità in cui un detenuto sia evaso e quella in cui sia deceduto.
-Scrivi una funzione di riepilogo dell'andamento del carcere e che stampi:
-  - il numero delle guardie,
-  - il numero di detenuti totali,
-  - il numero di detenuti evasi,
-  - il numero di detenuti deceduti all’interno della struttura.
-
-*/

@@ -1,7 +1,1 @@
 
-Fascicolo Guardia nome 'Bat', cognome 'Man', idNumber 1, dataAssunzione '12/12/13', dataFineRapporto '12/12/19', mansione 'Secondino'
-Fascicolo Guardia nome 'Bat', cognome 'Girl', idNumber 2, dataAssunzione '12/11/13', dataFineRapporto 'none', mansione 'Secondino'
-Fascicolo Guardia nome 'Robin', cognome 'Robin', idNumber 3, dataAssunzione '12/11/13', dataFineRapporto 'none', mansione 'Secondino'
-Fascicolo Guardia nome 'Josh', cognome 'Stiller', idNumber 4, dataAssunzione '12/11/13', dataFineRapporto 'none', mansione 'Secondino'
-Fascicolo Guardia nome 'Mat', cognome 'Fooler', idNumber 5, dataAssunzione '12/11/13', dataFineRapporto 'none', mansione 'Secondino'
-

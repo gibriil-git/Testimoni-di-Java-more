@@ -23,6 +23,22 @@ public class Archivio1 {
 
 	}
 
+	public ArrayList<Detenuti1> getListaDetenuti() {
+		return listaDetenuti;
+	}
+
+	public ArrayList<Guardie1> getListaGuardie() {
+		return listaGuardie;
+	}
+
+	public void setListaDetenuti(ArrayList<Detenuti1> listaDetenuti) {
+		this.listaDetenuti = listaDetenuti;
+	}
+
+	public void setListaGuardie(ArrayList<Guardie1> listaGuardie) {
+		this.listaGuardie = listaGuardie;
+	}
+
 	//aggiunge e scrive su file dati anagrafici e fascicoli nuovi detenuti da tastiera
 	public void addNewPrisoner(String[] newMember) {
 		Detenuti1 detenuto = new Detenuti1();
@@ -95,17 +111,17 @@ public class Archivio1 {
 	}
 
 
-	//aggiunge dati anagrafici prigionieri [DB]
+	//aggiunge dati anagrafici prigionieri alla lista
 	public void addPrisoner(Detenuti1 detenuto) {
 		this.listaDetenuti.add(detenuto);
 	}
 
-	//aggiunge dati anagrafici guardie  [DB]
+	//aggiunge dati anagrafici guardie alla lista
 	public void addGuard(Guardie1 guardia) {
 		this.listaGuardie.add(guardia);
 	}
 
-	// dati anagrafici x nome e cognome
+	// ricerca dati anagrafici x nome e cognome
 	public void searchPrisoner(ArrayList<Detenuti1> listaDetenuti, String nome, String cognome) {
 		for (Detenuti1 detenuti : listaDetenuti) {
 			if (detenuti.getNome().equals(nome) & detenuti.getCognome().equals(cognome)) {
@@ -122,7 +138,7 @@ public class Archivio1 {
 		}
 	}
 
-	// dati anagrafici x cognome
+	// ricerca dati anagrafici x cognome
 	public void searchPrisoner(String cognome) {
 		for (Detenuti1 detenuti : listaDetenuti) {
 			if (detenuti.getCognome().equals(cognome)) {
@@ -145,7 +161,7 @@ public class Archivio1 {
 		}
 	}
 
-	public void displayGuardsList(ArrayList<Guardie1> listaGuardie) {
+	public void displayGuardsList() {
 		for (Guardie1 guardie : listaGuardie) {
 			guardie.displayGuardia();
 		}
@@ -195,7 +211,7 @@ public class Archivio1 {
 	public ArrayList<Detenuti1> addObjectsPrisoners() {
 		Archivio1 archivio = new Archivio1(listaDetenuti, listaGuardie);
 
-		// dati anagrafici
+		// inserimento dati anagrafici detenuti nella lista
 		Detenuti1 markFisher = new Detenuti1("Mark", "Fisher", "13/7/67", "Gotham", "Gotham");
 		archivio.addPrisoner(markFisher);
 		Detenuti1 philipMiller = new Detenuti1("Philip", "Miller", "13/7/69", "Gotham", "Gotham");
@@ -208,7 +224,7 @@ public class Archivio1 {
 		archivio.addPrisoner(arleyQueen);
 
 
-		//FASCICOLI
+		//inserimento FASCICOLI detenuti nella lista
 		markFisher.setFascicoloDetenuto(new FascicoloDetenuti1("Mark", "Fisher", 001, "12/12/19", "none", "Aggressione", false, false));
 		philipMiller.setFascicoloDetenuto(new FascicoloDetenuti1("Philip", "Miller", 002, "12/12/19", "none", "Aggressione", false, true));
 		jesusChrist.setFascicoloDetenuto(new FascicoloDetenuti1("Jesus", "Christ", 003, "12/12/19", "none", "Aggressione", true, false));
@@ -221,7 +237,7 @@ public class Archivio1 {
 	public ArrayList<Guardie1> addObjectsGuards() {
 		Archivio1 archivio = new Archivio1(listaDetenuti, listaGuardie);
 
-		// dati anagrafici
+		//  inserimento dati anagrafici guardie nella lista
 		Guardie1 batMan = new Guardie1("Bat", "Man", "12/4/73", "Gotham", "Gotham");
 		archivio.addGuard(batMan);
 		Guardie1 batGirl = new Guardie1("Bat", "Girl", "11/5/90", "Gotham", "Gotham");
@@ -233,7 +249,7 @@ public class Archivio1 {
 		Guardie1 matFooler = new Guardie1("Mat", "Fooler", "2/8/71", "Gotham", "Gotham");
 		archivio.addGuard(matFooler);
 
-		//FASCICOLI
+		//inserimento FASCICOLI guardie nella lista
 		batMan.setFascicoloGuardia(new FascicoloGuardie1("Bat", "Man", 001, "12/12/13", "12/12/19", "Secondino"));
 		batGirl.setFascicoloGuardia(new FascicoloGuardie1("Bat", "Girl", 002, "12/11/13", "none", "Secondino"));
 		robinRobin.setFascicoloGuardia(new FascicoloGuardie1("Robin", "Robin", 003, "12/11/13", "none", "Secondino"));

@@ -1,14 +1,5 @@
 
-nome Bat cognome Man  dataNascita 12/4/73  luogoNascita Gotham  residenza Gotham
-nome Bat cognome Girl  dataNascita 11/5/90  luogoNascita Gotham  residenza Gotham
-nome Robin cognome Robin  dataNascita 12/11/80  luogoNascita Gotham  residenza Gotham
-nome Josh cognome Stiller  dataNascita 1/1/72  luogoNascita Gotham  residenza Gotham
-nome Mat cognome Fooler  dataNascita 2/8/71  luogoNascita Gotham  residenza Gotham
 
 
-nome Bat cognome Man  dataNascita 12/4/73  luogoNascita Gotham  residenza Gotham
-nome Bat cognome Girl  dataNascita 11/5/90  luogoNascita Gotham  residenza Gotham
-nome Robin cognome Robin  dataNascita 12/11/80  luogoNascita Gotham  residenza Gotham
-nome Josh cognome Stiller  dataNascita 1/1/72  luogoNascita Gotham  residenza Gotham
-nome Mat cognome Fooler  dataNascita 2/8/71  luogoNascita Gotham  residenza Gotham
+
 

@@ -23,6 +23,14 @@ public class Guardie1{
 		// TODO Auto-generated constructor stub
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
 	@Override
 	public String toString() {
 		return "nome" + " " + nome + " " + "cognome" + " " + cognome + "  dataNascita " + dataNascita
@@ -49,45 +57,6 @@ public class Guardie1{
 		this.fascicoloGuardia = fascicoloGuardia;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCognome() {
-		return cognome;
-	}
-
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-
-	public String getDataNascita() {
-		return dataNascita;
-	}
-
-	public void setDataNascita(String dataNascita) {
-		this.dataNascita = dataNascita;
-	}
-
-	public String getLuogoNascita() {
-		return luogoNascita;
-	}
-
-	public void setLuogoNascita(String luogoNascita) {
-		this.luogoNascita = luogoNascita;
-	}
-	
-	public String getResidenza() {
-		return residenza;
-	}
-
-	public void setResidenza(String residenza) {
-		this.residenza = residenza;
-	}
 	
 	public void displayGuardia() {
 		System.out.println(nome + " " + cognome + "\nNato il: " + dataNascita + " a " + luogoNascita + "\nResidente a: " + residenza+ "\n");

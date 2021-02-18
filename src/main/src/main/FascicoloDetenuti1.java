@@ -38,43 +38,13 @@ public class FascicoloDetenuti1 {
 				", deceduto " + deceduto ;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public String getCognome() {
-		return cognome;
-	}
-	
-	public int getIdNumber() {
-		return idNumber;
-	}
-
-	public String getDataCarcerazione() {
-		return dataCarcerazione;
-	}
-
-
-	public String getDataRilascio() {
-		return dataRilascio;
-	}
-
-
-	public String getRagioniCarcerazione() {
-		return ragioniCarcerazione;
-	}
-
-
 	public boolean isEvasione() {
 		return evasione;
 	}
 
-
 	public boolean isDeceduto() {
 		return deceduto;
 	}
-
-
 
 	public void displayFascicoloDetenuto() {
 		System.out.println(nome + " " + cognome + "\nID Number: " + idNumber + "\nData Carcerazione: " + dataCarcerazione

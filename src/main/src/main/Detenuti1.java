@@ -53,40 +53,8 @@ public class Detenuti1 {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public String getCognome() {
 		return cognome;
-	}
-
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-
-	public String getDataNascita() {
-		return dataNascita;
-	}
-
-	public void setDataNascita(String dataNascita) {
-		this.dataNascita = dataNascita;
-	}
-
-	public String getLuogoNascita() {
-		return luogoNascita;
-	}
-
-	public void setLuogoNascita(String luogoNascita) {
-		this.luogoNascita = luogoNascita;
-	}
-
-	public String getResidenza() {
-		return residenza;
-	}
-
-	public void setResidenza(String residenza) {
-		this.residenza = residenza;
 	}
 
 	public void displayDetenuto() {

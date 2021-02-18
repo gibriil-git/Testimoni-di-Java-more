@@ -17,7 +17,7 @@ public class Write extends Archivio1{
 		super(listaDetenuti, listaGuardie);
 	}
 
-	public static void writeDetenuti(ArrayList<Detenuti1> listaDetenuti) {
+	public void writeDetenuti() {
 
 		//aggiungiamo i detenuti al file di testo per creare un database
 		for (Detenuti1 detenuto : listaDetenuti) {
@@ -36,7 +36,7 @@ public class Write extends Archivio1{
 	}
 
 		//aggiungiamo le guardie al file di testo per creare un database
-	public static void writeGuardie(ArrayList<Guardie1> listaGuardie) {
+	public void writeGuardie() {
 
 		for (Guardie1 guardia : listaGuardie) {
 
@@ -54,7 +54,7 @@ public class Write extends Archivio1{
 		}
 	}
 
-	public static void writeFascicoloDetenuti(ArrayList<Detenuti1> listaDetenuti) {
+	public void writeFascicoloDetenuti() {
 
 		//aggiungiamo i Fascicoli detenuti al file di testo per creare un database
 		for (Detenuti1 detenuto : listaDetenuti) {
@@ -72,7 +72,7 @@ public class Write extends Archivio1{
 		}
 	}
 
-	public static void writeFascicoloGuardie(ArrayList<Guardie1> listaGuardie) {
+	public void writeFascicoloGuardie() {
 
 		//aggiungiamo i fascicoli delle guardie al file di testo per creare un database
 		for (Guardie1 guardia : listaGuardie) {
