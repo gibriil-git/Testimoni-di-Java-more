@@ -1,5 +1,7 @@
 package src.main;
 
+import java.util.ArrayList;
+
 public class Guardie1{
 
 	private String nome;
@@ -30,6 +32,15 @@ public class Guardie1{
 
 	// trova il fascicolo della guardia e lo stampa attraverso metodo 'displayGuardia'
 	public FascicoloGuardie1 getFascicoloGuardia() {
+		return fascicoloGuardia;
+	}
+
+	public FascicoloGuardie1 getFascicoloGuardia(ArrayList<Guardie1> listaGuardie, String nome) {
+		for (Guardie1 guardia : listaGuardie) {
+			if (guardia.getNome().equals(nome)) {
+				guardia.getFascicoloGuardia().displayFascicoloGuardia();
+			}
+		}
 		return fascicoloGuardia;
 	}
 

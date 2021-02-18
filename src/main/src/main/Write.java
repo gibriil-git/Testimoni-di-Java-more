@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.FileWriter;
 
-public class Write extends AddObj{
+public class Write extends Archivio1{
 
 	public Write(ArrayList<Detenuti1> listaDetenuti, ArrayList<Guardie1> listaGuardie) {
 		super(listaDetenuti, listaGuardie);
@@ -43,6 +43,42 @@ public class Write extends AddObj{
 			try (FileWriter fas = new FileWriter("guardie.txt", true);
 				 PrintWriter fos = new PrintWriter(fas)) {
 				fos.println(guardia.toString());
+
+				System.out.println("Object written onto the file");
+
+			} catch (FileNotFoundException e) {
+				System.out.println("FileNotFoundException");
+			} catch (IOException e) {
+				System.out.println("IOException");
+			}
+		}
+	}
+
+	public static void writeFascicoloDetenuti(ArrayList<Detenuti1> listaDetenuti) {
+
+		//aggiungiamo i Fascicoli detenuti al file di testo per creare un database
+		for (Detenuti1 detenuto : listaDetenuti) {
+			try (FileWriter fas = new FileWriter("FascicoliDetenuti.txt", true);
+				 PrintWriter fos = new PrintWriter(fas)) {
+				fos.println(detenuto.getFascicoloDetenuto().toString());
+
+				System.out.println("Object written onto the file");
+
+			} catch (FileNotFoundException e) {
+				System.out.println("FileNotFoundException");
+			} catch (IOException e) {
+				System.out.println("IOException");
+			}
+		}
+	}
+
+	public static void writeFascicoloGuardie(ArrayList<Guardie1> listaGuardie) {
+
+		//aggiungiamo i fascicoli delle guardie al file di testo per creare un database
+		for (Guardie1 guardia : listaGuardie) {
+			try (FileWriter fas = new FileWriter("FascicoliGuardie.txt", true);
+				 PrintWriter fos = new PrintWriter(fas)) {
+				fos.println(guardia.getFascicoloGuardia().toString());
 
 				System.out.println("Object written onto the file");
 

@@ -7,10 +7,19 @@ public class Carcere_di_gotham_Oggetti_dentro_Oggetti {
 
 public static String[] scannerNewMember() {
 	Scanner s = new Scanner(System.in);
-	System.out.println("Vuoi inserire un nuovo detenuto[1] o una guardia[2]: ");
-
 	String nome = "";
-	if(s.nextLine().equals("1")) {
+	String dataCarcerazione = "";
+	String dataRilascio = "";
+	String ragioniCarcerazione = "";
+	String evasione = "";
+	String deceduto = "";
+	String dataAssunzione = "";
+	String dataFineRapporto = "";
+	String mansione = "";
+
+	System.out.println("Vuoi inserire un nuovo detenuto[1] o una guardia[2]: ");
+	String a = s.nextLine();
+	if(a.equals("1")) {
 		System.out.println("Inserisci il nome del detenuto: ");
 		nome = s.nextLine();
 	}
@@ -27,8 +36,38 @@ public static String[] scannerNewMember() {
 	String luogoNascita = s.nextLine();
 	System.out.println("Inserisci la residenza: ");
 	String residenza = s.nextLine();
+	System.out.println("Ora inserisci i dati per il fascicolo. \nInserisci il nome: ");
+	String nomeF = s.nextLine();
+	System.out.println("Inserisci il cognome");
+	String cognomeF = s.nextLine();
+	System.out.println("Inserisci numero ID: ");
+	String idNumber = s.nextLine();
 
-	String[] newMember = {nome, cognome, dataNascita, luogoNascita, residenza};
+	if(a.equals("1")){
+		System.out.println("Inserisci la data di carcerazione");
+		dataCarcerazione = s.nextLine();
+		System.out.println("Inserisci la data di rilascio");
+		dataRilascio = s.nextLine();
+		System.out.println("Inserisci le ragioni di carcerazione");
+		ragioniCarcerazione = s.nextLine();
+		System.out.println("Il detenuto e' evaso? [true] [false]");
+		evasione = s.nextLine();
+		System.out.println("Il detenuto e' deceduto? [true] [false]");
+		deceduto = s.nextLine();
+	}
+	else{
+		System.out.println("Inserisci data assunzione: ");
+		dataAssunzione = s.nextLine();
+		System.out.println("Inserisci data fine contratto: ");
+		dataFineRapporto = s.nextLine();
+		System.out.println("Inserisci la mansione: ");
+		mansione = s.nextLine();
+	}
+
+
+	String[] newMember = {nome, cognome, dataNascita, luogoNascita, residenza,
+	nomeF, cognomeF, idNumber, dataCarcerazione, dataRilascio, ragioniCarcerazione, evasione, deceduto,
+	dataAssunzione, dataFineRapporto, mansione};
 
 	return newMember;
 }
@@ -44,48 +83,39 @@ public static String[] scannerNewMember() {
 		AddObj obj = new AddObj(listaDetenuti, listaGuardie);
 
 
+//Inserimento e scrittura su file del DB di guardie e detenuti dal metodo 'addObjectsPrisoners' e 'addObjectsGuards'
+		Write prisoners = new Write(listaDetenuti, listaGuardie);
+		Write guards = new Write(listaDetenuti, listaGuardie);
+		//guards.writeGuardie(archive.addObjectsGuards());
+		//prisoners.writeDetenuti(archive.addObjectsPrisoners());
+		//prisoners.writeFascicoloDetenuti(archive.addObjectsPrisoners());
+		//guards.writeFascicoloGuardie(archive.addObjectsGuards());
 
-	// get fascicoliiiiiiiiiiiiiiiiiiiiiiiiiiiiiïiiiiiiiiï222iiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-
-
-
-
+//ricerca fascicoli x nome
 		Detenuti1 detenuto = new Detenuti1();
-		detenuto.getFascicoloDetenuto().displayFascicoloDetenuto();
-		//batMan.getFascicoloGuardia().displayFascicoloGuardia();
-		//archivio.searchPrisoner("Jesus", "Christ");
-		//archivio.searchGuard("Bat", "Man");
+		Guardie1 guardia = new Guardie1();
+		//detenuto.getFascicoloDetenuto(archive.addObjectsPrisoners(), "Joker");
+		//guardia.getFascicoloGuardia(archive.addObjectsGuards(), "Bat");
+		//archive.searchPrisoner(archive.addObjectsPrisoners(), "Jesus", "Christ");
+		//archive.searchGuard(archive.addObjectsGuards(), "Bat", "Man");
 
+//Inserimento e scrittura su file nuovi detenuti e guardie da tastiera
 		//archive.addNewPrisoner(scannerNewMember());
 		//archive.addNewGuard(scannerNewMember());
 
-		Write prisoners = new Write(listaDetenuti, listaGuardie);
-		Write guards = new Write(listaDetenuti, listaGuardie);
-		//guards.writeGuardie(obj.addObjectsGuards());
-		//prisoners.writeDetenuti(obj.addObjectsPrisoners());
+//Lettura da file
 
-		/*
 		Read read = new Read();
-		read.readPrisoners();
-		read.readGuards();
-		*/
+		//read.readPrisoners();
+		//read.readGuards();
 
-		//archive.displayPrisonersList(obj.addObjectsPrisoners());
-		//archive.displayGuardsList(obj.addObjectsGuards());
-		//archive.displayFascicoliPrisonersList();
-		//archivio.displayFascicoliGuardsList();
-		//archivio.riepilogoCarcere();
+//Displaying di liste dati anagrafici e fascicoli
+		//archive.displayPrisonersList(archive.addObjectsPrisoners());
+		//archive.displayGuardsList(archive.addObjectsGuards());
+		//archive.displayFascicoliPrisonersList(archive.addObjectsPrisoners());
+		//archive.displayFascicoliGuardsList(archive.addObjectsGuards());
+		//archive.riepilogoCarcere(archive.addObjectsPrisoners(), archive.addObjectsGuards());
 
-
-
-		//Inserimento nuovi detenuti e guardie da tastiera
-		//Detenuti1 Freezer = new Detenuti1();
-		//archivio.addNewPrisoner(Freezer);
-		//Guardie1 waterMan = new Guardie1();
-		//archivio.addNewGuard(waterMan);
-		//archivio.displayPrisonersList();
-		//archivio.displayGuardsList();
-		
 	}
 
 }

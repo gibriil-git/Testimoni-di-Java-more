@@ -24,6 +24,20 @@ public class FascicoloDetenuti1 {
 		this.deceduto = deceduto;
 	}
 
+	public FascicoloDetenuti1() { }
+
+	@Override
+	public String toString() {
+		return "Fascicolo Detenuto " + "nome '" + nome + '\'' +
+				", cognome '" + cognome + '\'' +
+				", idNumber " + idNumber +
+				", dataCarcerazione '" + dataCarcerazione + '\'' +
+				", dataRilascio '" + dataRilascio + '\'' +
+				", ragioniCarcerazione '" + ragioniCarcerazione + '\'' +
+				", evasione " + evasione +
+				", deceduto " + deceduto ;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -60,11 +74,13 @@ public class FascicoloDetenuti1 {
 		return deceduto;
 	}
 
+
+
 	public void displayFascicoloDetenuto() {
-		System.out.println(nome + " " + cognome + "\nID Number: " + idNumber + "\nData Carcerazione: " + dataCarcerazione 
-							+ "\nData Rilascio: " + dataRilascio + "\nRagioni Carcerazione: " + ragioniCarcerazione 
-							+ "\nEvaso: " + evasione + "\nDeceduto: " + deceduto+ "\n");
-				}
+		System.out.println(nome + " " + cognome + "\nID Number: " + idNumber + "\nData Carcerazione: " + dataCarcerazione
+				+ "\nData Rilascio: " + dataRilascio + "\nRagioni Carcerazione: " + ragioniCarcerazione
+				+ "\nEvaso: " + evasione + "\nDeceduto: " + deceduto+ "\n");
+	}
 
 
 }

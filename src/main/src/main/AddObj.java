@@ -10,7 +10,7 @@ public class AddObj extends Archivio1{
     public AddObj() {
         super();
     }
-
+/*
     public ArrayList<Detenuti1> addObjectsPrisoners() {
         Archivio1 archivio = new Archivio1(listaDetenuti, listaGuardie);
 
@@ -60,5 +60,5 @@ public class AddObj extends Archivio1{
         matFooler.setFascicoloGuardia(new FascicoloGuardie1("Mat", "Fooler", 005, "12/11/13", "none", "Secondino"));
 
         return listaGuardie;
-    }
+    }*/
 }

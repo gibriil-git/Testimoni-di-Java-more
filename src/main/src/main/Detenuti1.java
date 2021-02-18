@@ -1,5 +1,7 @@
 package src.main;
 
+import java.util.ArrayList;
+
 public class Detenuti1 {
 
 	private String nome;
@@ -18,9 +20,8 @@ public class Detenuti1 {
 		
 	}
 
-	public Detenuti1() {
-		// TODO Auto-generated constructor stub
-	}
+	public Detenuti1() { }
+
 
 	@Override
 	public String toString() {
@@ -33,6 +34,16 @@ public class Detenuti1 {
 	public FascicoloDetenuti1 getFascicoloDetenuto() {
 		return fascicoloDetenuto;
 	}
+
+	public FascicoloDetenuti1 getFascicoloDetenuto(ArrayList<Detenuti1> listaDetenuti, String nome) {
+		for (Detenuti1 detenuto : listaDetenuti) {
+			if (detenuto.getNome().equals(nome)) {
+				detenuto.getFascicoloDetenuto().displayFascicoloDetenuto();
+			}
+		}
+		return fascicoloDetenuto;
+	}
+
 	// aggiunge fascicoli detenuti all'oggetto 'Detenuti1', poiche' 'FascicoloDetenuto' e' attributo di 'Detenuti1'
 	public void setFascicoloDetenuto(FascicoloDetenuti1 fascicoloDetenuto) {
 		this.fascicoloDetenuto = fascicoloDetenuto;

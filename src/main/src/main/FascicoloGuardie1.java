@@ -20,6 +20,17 @@ public class FascicoloGuardie1 {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "Fascicolo Guardia " +
+				"nome '" + nome + '\'' +
+				", cognome '" + cognome + '\'' +
+				", idNumber " + idNumber +
+				", dataAssunzione '" + dataAssunzione + '\'' +
+				", dataFineRapporto '" + dataFineRapporto + '\'' +
+				", mansione '" + mansione + '\'' ;
+	}
+
 	public String getNome() {
 		return nome;
 	}
