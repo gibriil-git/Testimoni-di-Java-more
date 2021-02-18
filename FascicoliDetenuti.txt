@@ -1,0 +1,6 @@
+Fascicolo Detenuto nome 'Mark', cognome 'Fisher', idNumber 1, dataCarcerazione '12/12/19', dataRilascio 'none', ragioniCarcerazione 'Aggressione', evasione false, deceduto false
+Fascicolo Detenuto nome 'Philip', cognome 'Miller', idNumber 2, dataCarcerazione '12/12/19', dataRilascio 'none', ragioniCarcerazione 'Aggressione', evasione false, deceduto true
+Fascicolo Detenuto nome 'Jesus', cognome 'Christ', idNumber 3, dataCarcerazione '12/12/19', dataRilascio 'none', ragioniCarcerazione 'Aggressione', evasione true, deceduto false
+Fascicolo Detenuto nome 'Joker', cognome 'Joker', idNumber 4, dataCarcerazione '12/12/19', dataRilascio 'none', ragioniCarcerazione 'Aggressione', evasione false, deceduto false
+Fascicolo Detenuto nome 'Arley', cognome 'Queen', idNumber 5, dataCarcerazione '12/12/19', dataRilascio 'none', ragioniCarcerazione 'Aggressione', evasione false, deceduto false
+Fascicolo Detenuto nome '12', cognome '12', idNumber 12, dataCarcerazione '12', dataRilascio '12', ragioniCarcerazione '12', evasione true, deceduto false
