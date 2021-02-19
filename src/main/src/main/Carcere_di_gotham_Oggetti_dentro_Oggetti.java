@@ -91,6 +91,9 @@ public static String[] scannerNewMember() {
 		archive.addObjectsGuards();
 		archive.addObjectsPrisoners();
 
+//modifica gli elementi di un oggetto
+		//archive.getListaGuardie().set(1, new Guardie1("Bit", "woman", "13-6-78", "Gotham", "Gotham"));
+
 //scrittura su file del DB di guardie e detenuti dal metodo 'addObjectsPrisoners' e 'addObjectsGuards'
 		//guards.writeGuardie();
 		//prisoners.writeDetenuti();
@@ -99,9 +102,12 @@ public static String[] scannerNewMember() {
 
 //ricerca fascicoli x nome
 		//detenuto.getFascicoloDetenuto(listaDetenuti, "Joker");
-		//guardia.getFascicoloGuardia(archive.addObjectsGuards(), "Bat");
-		//archive.searchPrisoner(archive.addObjectsPrisoners(), "Jesus", "Christ");
-		//archive.searchGuard(archive.addObjectsGuards(), "Bat", "Man");
+		//guardia.getFascicoloGuardia(listaGuardie, "Bat");
+
+//ricerca dati anagrafici x nome e cognome o solo x cognome
+		//archive.searchPrisoner(listaDetenuti, "Jesus", "Christ");
+		//archive.searchGuard(listaGuardie, "Bat", "Man");
+		//archive.searchPrisoner(listaDetenuti, "Queen")
 
 //Inserimento e scrittura su file nuovi detenuti e guardie da tastiera
 		//archive.addNewPrisoner(scannerNewMember());
@@ -112,10 +118,10 @@ public static String[] scannerNewMember() {
 		//read.readGuards();
 
 //Displaying di liste dati anagrafici e fascicoli
-		//archive.displayPrisonersList(archive.addObjectsPrisoners());
+		//archive.displayPrisonersList();
 		//archive.displayGuardsList();
-		//archive.displayFascicoliPrisonersList(archive.addObjectsPrisoners());
-		//archive.displayFascicoliGuardsList(archive.addObjectsGuards());
+		//archive.displayFascicoliPrisonersList();
+		archive.displayFascicoliGuardsList();
 		//archive.riepilogoCarcere(archive.addObjectsPrisoners(), archive.addObjectsGuards());
 
 	}

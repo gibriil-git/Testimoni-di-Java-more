@@ -155,7 +155,7 @@ public class Archivio1 {
 		}
 	}
 
-	public void displayPrisonersList(ArrayList<Detenuti1> listaDetenuti) {
+	public void displayPrisonersList() {
 		for (Detenuti1 detenuti : listaDetenuti) {
 			detenuti.displayDetenuto();
 		}
@@ -167,14 +167,14 @@ public class Archivio1 {
 		}
 	}
 
-	public void displayFascicoliPrisonersList(ArrayList<Detenuti1> listaDetenuti) {
+	public void displayFascicoliPrisonersList() {
 		for (Detenuti1 detenuti : listaDetenuti) {
 			detenuti.getFascicoloDetenuto().displayFascicoloDetenuto();
 			;
 		}
 	}
 
-	public void displayFascicoliGuardsList(ArrayList<Guardie1> listaGuardie) {
+	public void displayFascicoliGuardsList() {
 		for (Guardie1 guardie : listaGuardie) {
 			guardie.getFascicoloGuardia().displayFascicoloGuardia();
 		}
